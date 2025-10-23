@@ -1,3 +1,3 @@
 # Sistem-Manajemen-Supermarket
 
-<details>Contoh</details>
+<details># Contoh</details>
