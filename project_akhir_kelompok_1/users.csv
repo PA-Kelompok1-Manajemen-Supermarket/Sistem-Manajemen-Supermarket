@@ -1,0 +1,4 @@
+username,password,saldo,role
+admin,123,0,admin
+khairul,123,550000,customer
+khansa,123,255000,customer
