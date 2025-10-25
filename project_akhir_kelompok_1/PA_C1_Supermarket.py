@@ -79,9 +79,15 @@ def regis():
             writer = csv.writer(f)
             writer.writerow(["username", "password", "saldo", "role"])
 
-    username = input("Masukkan username: ").strip()
+    username = input("Masukkan Username: ").strip()
     if username == "":
         print("> Username tidak boleh kosong!")
+        return
+    elif len(username) < 4:
+        print("> Username terlalu pendek! Minimal 4 karakter.")
+        return
+    elif len(username) > 12:
+        print("> Username terlalu panjang! Maksimal 12 karakter.")
         return
 
     with open(users, "r", newline="") as f:
@@ -91,7 +97,7 @@ def regis():
             if not row:
                 continue
             if row[0] == username:
-                print("> Username sudah terdaftar, silakan login.")
+                print("> Username sudah terdaftar")
                 return
 
     password = pwinput.pwinput("Masukkan password: ", mask="*").strip()
@@ -104,8 +110,11 @@ def regis():
         writer.writerow([username, password, 0, "customer"])
 
     clear()
-    print("Akun berhasil dibuat! 🎉")
-    print("Role anda: customer\n")
+    print("=" * 40)
+    print("✅ Akun berhasil dibuat!")
+    print(f"👤 Username : {username}")
+    print("🔑 Role anda : customer")
+    print("=" * 40 + "\n")
 
 
 # login User
@@ -209,6 +218,12 @@ def beli_barang(username):
         return
 
     saldo_user = int(data_user[user_index][2])
+    if saldo_user <= 0:
+        print("\n❌ Saldo Anda kosong! Silakan isi saldo terlebih dahulu sebelum berbelanja.")
+        input("\nTekan Enter untuk kembali...")
+        menu_customer(username)
+        return
+
     keranjang = []
 
     while True:
@@ -235,7 +250,17 @@ def beli_barang(username):
         harga_produk = int(data_produk[produk_index][2])
         stok_produk = int(data_produk[produk_index][3])
 
-        jumlah = int(input(f"Masukkan jumlah {nama_produk} yang ingin dibeli: "))
+        # Validasi input jumlah agar hanya angka
+        while True:
+            jumlah_input = input(f"Masukkan jumlah {nama_produk} yang ingin dibeli: ").strip()
+            if not jumlah_input.isdigit():
+                print("❌ Input tidak valid! Jumlah harus berupa angka.")
+                continue
+            jumlah = int(jumlah_input)
+            if jumlah <= 0:
+                print("❌ Jumlah harus lebih dari 0.")
+                continue
+            break
 
         if jumlah > stok_produk:
             print("❌ Stok tidak cukup!")
@@ -244,7 +269,7 @@ def beli_barang(username):
         total_harga = harga_produk * jumlah
 
         if saldo_user < total_harga:
-            print("❌ Saldo tidak cukup!")
+            print("❌ Saldo tidak cukup untuk membeli produk ini!")
             continue
 
         keranjang.append({
@@ -422,15 +447,31 @@ def menu_admin():
 def tambah_barang():
     clear()
     print("\n+--------TAMBAHKAN PRODUK BARU--------+")
-    id_produk = input("Masukkan ID Produk: ")
+
+    while True:
+        id_produk = input("Masukkan ID Produk (angka saja): ")
+        if not id_produk.isdigit():
+            print("❌ ID Produk hanya boleh berisi angka!\n")
+        else:
+            break
+
     nama_produk = input("Masukkan Nama Produk: ")
     harga_produk = input("Masukkan Harga Produk: ")
     stok_produk = input("Masukkan Stok Produk: ")
 
+    # mengecek id apakah ada di database
+    if os.path.exists(product):
+        with open(product, "r") as file:
+            reader = csv.reader(file)
+            next(reader, None)
+            for row in reader:
+                if row and row[0] == id_produk:
+                    print("\n❌ ID Produk sudah ada!\n")
+                    return
 
     etalase_produk.add_row([id_produk, nama_produk, harga_produk, stok_produk])
 
-    with open(product, mode="a", newline="") as file:
+    with open(product, "a", newline="") as file:
         writer = csv.writer(file)
         if file.tell() == 0:
             writer.writerow(["ID Produk", "Nama Produk", "Harga Produk", "Stok Produk"])
@@ -470,7 +511,12 @@ def tampilkan_barang():
 def update_barang():
     clear()
     tampilkan_barang()
-    id_produk = input("\nMasukkan ID Produk yang ingin diubah: ")
+    while True:
+        id_produk = input("Masukkan ID Produk yang ingin diubah: ")
+        if not id_produk.isdigit():
+            print("❌ ID Produk hanya boleh berisi angka!\n")
+        else:
+            break
 
     updated_rows = []
     found = False
@@ -504,7 +550,13 @@ def update_barang():
 def hapus_barang():
     clear()
     tampilkan_barang()
-    id_produk = input("\nMasukkan ID Produk yang ingin dihapus: ")
+    while True:
+        id_produk = input("Masukkan ID Produk yang ingin diubah: ")
+        if not id_produk.isdigit():
+            print("❌ ID Produk hanya boleh berisi angka!\n")
+        else:
+            break
+
     updated_rows = []
     found = False
 
