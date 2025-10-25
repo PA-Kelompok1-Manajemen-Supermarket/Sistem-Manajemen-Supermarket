@@ -1,4 +1,6 @@
 username,password,saldo,role
 admin,123,0,admin
-khairul,123,550000,customer
-khansa,123,255000,customer
+khairul,123,50000,customer
+khansa,123,50000,customer
+karis,123,50000,customer
+aldi,123,50000,customer
