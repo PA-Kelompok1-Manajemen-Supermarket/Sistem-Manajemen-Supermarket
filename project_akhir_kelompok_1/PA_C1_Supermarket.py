@@ -250,7 +250,6 @@ def beli_barang(username):
         harga_produk = int(data_produk[produk_index][2])
         stok_produk = int(data_produk[produk_index][3])
 
-        # Validasi input jumlah agar hanya angka
         while True:
             jumlah_input = input(f"Masukkan jumlah {nama_produk} yang ingin dibeli: ").strip()
             if not jumlah_input.isdigit():
@@ -587,3 +586,4 @@ def hapus_barang():
 
 # jalankan program 
 main()
+
