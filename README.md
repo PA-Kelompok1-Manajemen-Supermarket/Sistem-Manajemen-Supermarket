@@ -200,9 +200,4 @@ untuk mengakhiri program, maka pembeli dapat memilih pilihan 3 yaitu keluar
 ---
 </details>
 
-<details>
-   <summary>5. Output "Tidak valid"</summary>
-</details>
-
-
 
