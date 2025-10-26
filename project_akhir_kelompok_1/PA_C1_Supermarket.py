@@ -111,9 +111,9 @@ def regis():
 
     clear()
     print("=" * 40)
-    print("✅ Akun berhasil dibuat!")
-    print(f"👤 Username : {username}")
-    print("🔑 Role anda : customer")
+    print("Akun berhasil dibuat")
+    print(f"Username : {username}")
+    print("Role anda : customer")
     print("=" * 40 + "\n")
 
 
@@ -219,7 +219,7 @@ def beli_barang(username):
 
     saldo_user = int(data_user[user_index][2])
     if saldo_user <= 0:
-        print("\n❌ Saldo Anda kosong! Silakan isi saldo terlebih dahulu sebelum berbelanja.")
+        print("\nSaldo Anda kosong, Silakan isi saldo terlebih dahulu sebelum berbelanja.")
         input("\nTekan Enter untuk kembali...")
         menu_customer(username)
         return
@@ -239,7 +239,7 @@ def beli_barang(username):
                 break
 
         if produk_index is None:
-            print("❌ Produk tidak ditemukan!")
+            print("Produk tidak ditemukan!")
             lanjut = input("Ingin coba lagi? (y/n): ").lower()
             if lanjut != "y":
                 break
@@ -253,22 +253,22 @@ def beli_barang(username):
         while True:
             jumlah_input = input(f"Masukkan jumlah {nama_produk} yang ingin dibeli: ").strip()
             if not jumlah_input.isdigit():
-                print("❌ Input tidak valid! Jumlah harus berupa angka.")
+                print("Input tidak valid, Jumlah harus berupa angka.")
                 continue
             jumlah = int(jumlah_input)
             if jumlah <= 0:
-                print("❌ Jumlah harus lebih dari 0.")
+                print("Jumlah harus lebih dari 0.")
                 continue
             break
 
         if jumlah > stok_produk:
-            print("❌ Stok tidak cukup!")
+            print("Stok tidak cukup!")
             continue
 
         total_harga = harga_produk * jumlah
 
         if saldo_user < total_harga:
-            print("❌ Saldo tidak cukup untuk membeli produk ini!")
+            print("Saldo tidak cukup untuk membeli produk ini!")
             continue
 
         keranjang.append({
@@ -316,14 +316,14 @@ def beli_barang(username):
     print(tabel_invoice)
     print(f"Total Pembayaran : Rp {total_semua:,}")
     print(f"Sisa Saldo       : Rp {saldo_user:,}")
-    print("✅ Transaksi Berhasil! Terima kasih telah berbelanja di K3A Mart ❤️\n")
+    print("Transaksi Berhasil! Terima kasih telah berbelanja di K3A Mart\n")
 
     lanjut = input("Apakah ingin lanjut belanja? (y/n): ").lower()
     if lanjut == "y":
         menu_customer(username)
     else:
         clear()
-        print("\nTerima kasih sudah berbelanja 🙏")
+        print("\nTerima kasih sudah berbelanja")
         login_user()
 
 
@@ -450,7 +450,7 @@ def tambah_barang():
     while True:
         id_produk = input("Masukkan ID Produk (angka saja): ")
         if not id_produk.isdigit():
-            print("❌ ID Produk hanya boleh berisi angka!\n")
+            print("ID Produk hanya boleh berisi angka!\n")
         else:
             break
 
@@ -465,7 +465,7 @@ def tambah_barang():
             next(reader, None)
             for row in reader:
                 if row and row[0] == id_produk:
-                    print("\n❌ ID Produk sudah ada!\n")
+                    print("\nID Produk sudah ada!\n")
                     return
 
     etalase_produk.add_row([id_produk, nama_produk, harga_produk, stok_produk])
@@ -513,7 +513,7 @@ def update_barang():
     while True:
         id_produk = input("Masukkan ID Produk yang ingin diubah: ")
         if not id_produk.isdigit():
-            print("❌ ID Produk hanya boleh berisi angka!\n")
+            print("ID Produk hanya boleh berisi angka!\n")
         else:
             break
 
@@ -552,7 +552,7 @@ def hapus_barang():
     while True:
         id_produk = input("Masukkan ID Produk yang ingin diubah: ")
         if not id_produk.isdigit():
-            print("❌ ID Produk hanya boleh berisi angka!\n")
+            print("ID Produk hanya boleh berisi angka!\n")
         else:
             break
 
@@ -586,4 +586,5 @@ def hapus_barang():
 
 # jalankan program 
 main()
+
 
