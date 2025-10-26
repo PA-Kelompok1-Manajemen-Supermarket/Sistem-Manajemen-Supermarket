@@ -8,18 +8,24 @@ Project Akhir Kelompok 01 - Sistem Informasi C'2025
 ---
 
 ## FLOWCHART
-###  **Menu Utama**
+
+<details>
+   <summary>1. Flowchart Menu Utama</summary>
+  
 ![PADDP-Menu Utama](https://github.com/user-attachments/assets/181891bc-2009-483b-a539-b3a10b896f50)
 
 Flowchart sistem login dan registrasi ini menggambarkan alur pengguna dari tampilan awal hingga masuk ke menu utama. Pengguna dapat memilih untuk login, registrasi, atau keluar dari sistem. Saat login, sistem akan memverifikasi username dan password untuk menentukan akses sebagai admin atau customer. Jika data tidak valid, muncul pesan kesalahan, sedangkan pada registrasi akun baru akan disimpan dan pengguna kembali ke menu utama.
 
 ---
+</details>
 
-### **Menu Admin**
+<details>
+   <summary>2. Flowchart Menu Admin</summary>
+   
 ![PADDP-Menu Admin](https://github.com/user-attachments/assets/00184d55-976f-43c8-9db9-549c0d5c6f63)
+
 Flowchart menu admin menggambarkan alur kerja fitur yang digunakan oleh admin untuk mengelola data produk dalam sistem. Melalui menu ini, admin dapat menambahkan produk baru, melihat daftar produk yang tersedia, memperbarui informasi produk, menghapus produk yang tidak diperlukan, serta keluar (logout) dari sistem. Setiap proses memiliki tahapan validasi untuk memastikan data yang dikelola benar dan tidak terjadi duplikasi atau kesalahan input.
 
----
 
 **Tambah Produk**
 - Admin memilih opsi tambah produk.
@@ -52,12 +58,14 @@ Flowchart menu admin menggambarkan alur kerja fitur yang digunakan oleh admin un
 - Sistem akan mengembalikan admin ke menu utama.
 
 ---
+</details>
 
-### Menu Pembeli
+<details>
+   <summary>3. Flowchart Menu Pembeli</summary>
+   
 ![PADDP-Menu Pembeli](https://github.com/user-attachments/assets/254f922f-b537-4536-b07d-7ae9e650961f)
 Flowchart menu pembeli menggambarkan alur aktivitas pengguna saat melakukan transaksi pembelian produk. Melalui menu ini, pembeli dapat melihat daftar produk, membeli produk, mengecek saldo, melakukan top up saldo, serta keluar dari sistem. Setiap proses memiliki tahap validasi agar transaksi berjalan dengan benar dan saldo pengguna diperbarui secara otomatis.
 
----
 
 **Beli Produk**
 
@@ -97,14 +105,22 @@ Flowchart menu pembeli menggambarkan alur aktivitas pengguna saat melakukan tran
 
 - Sistem akan mengembalikan pengguna ke menu utama.
 
-# PENJELASAN OUTPUT
+---
+</details>
 
-<img width="296" height="185" alt="image" src="https://github.com/user-attachments/assets/7b84723c-6016-43e6-9633-c414e3c65595" />\
+## OUTPUT
+
+<details>
+   <summary>1. Output Menu Utama</summary>
+<img width="296" height="185" alt="image" src="https://github.com/user-attachments/assets/7b84723c-6016-43e6-9633-c414e3c65595" />
+   
 Pada saat program dijalankan, tampilan pertama yang ditampilkan program ini adalah pilihan untuk melakukan login sebagai Admin atau User. Jika memilih “1”, maka akan muncul tampilan login admin dan diminta untuk memasukkan username dan password untuk admin. Jika memilih “2”, maka akan muncul tampilan opsi register, dan jika memilih “3”, maka  akan keluar dari program
 
 ---
+</details>
 
-## Menu Admin
+<details>
+   <summary>2. Output Menu Admin</summary>
 <img width="236" height="119" alt="image" src="https://github.com/user-attachments/assets/25f032e2-a810-4291-ad10-492d1ba5dc9d" />
 
 Di menu login admin ini kita diminta untuk memasukkan username dan password untuk admin.
@@ -140,8 +156,10 @@ jika admin memilih pilihan 4, maka admin diminta untuk menginput ID produk yang 
 jika admin memilih 5, maka admin akan keluar dari menu admin dan kembali pada menu awal program.
 
 ---
+</details>
 
-## Menu Pembeli
+<details>
+   <summary>3. Output Menu Pembeli</summary>
 <img width="658" height="446" alt="image" src="https://github.com/user-attachments/assets/a8cc912e-741f-4745-9083-b6623046e7fb" />
 
 Di dalam menu pembeli ini terdapat 4 pilihan uang dapat dipilih oleh pembeli. Pembeli akan diminta memasukkan pilihan yang diinginkan untuk menjalankan program. 
@@ -171,11 +189,20 @@ Jika sudah memilih maka saldo e-money telah berhasil ditambahkan ke akun pembeli
 Jika pembeli memilih pilihan 4, maka pembeli akan keluar dari menu pembeli dan Kembali ke menu login user.
 
 ---
+</details>
 
- ## Menu Keluar
+<details>
+   <summary>4. Output Keluar</summary>
 <img width="571" height="148" alt="image" src="https://github.com/user-attachments/assets/e8ad196f-f738-47ee-bc34-3015dcacf946" />
 
 untuk mengakhiri program, maka pembeli dapat memilih pilihan 3 yaitu keluar
+
+---
+</details>
+
+<details>
+   <summary>5. Output "Tidak valid"</summary>
+</details>
 
 
 
