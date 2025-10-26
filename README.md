@@ -148,6 +148,7 @@ Di dalam menu pembeli ini terdapat 4 pilihan uang dapat dipilih oleh pembeli. Pe
 jika pembeli memilih 1, maka pembeli akan diminta untuk memasukkan ID produk dan jumlah produk yang ingin dibeli.
 
 <img width="813" height="383" alt="image" src="https://github.com/user-attachments/assets/ae154511-0b26-4dd4-829c-570d053e8990" />
+
 Setelah selesai memasukkan ID dan jumlah produk, maka pembeli akan diminta untuk memilih metode pembayaran yaitu e-money. Ini adalah struk belanja
 
 <img width="481" height="101" alt="image" src="https://github.com/user-attachments/assets/2ea419dd-67c7-47dc-a357-818af7df746b" />
@@ -166,6 +167,7 @@ Jika sudah memilih maka saldo e-money telah berhasil ditambahkan ke akun pembeli
 
 Jika pembeli memilih pilihan 4, maka pembeli akan keluar dari menu pembeli dan Kembali ke menu login user.
 
+ ## Menu Keluar
 <img width="571" height="148" alt="image" src="https://github.com/user-attachments/assets/e8ad196f-f738-47ee-bc34-3015dcacf946" />
 
 untuk mengakhiri program, maka pembeli dapat memilih pilihan 3 yaitu keluar
