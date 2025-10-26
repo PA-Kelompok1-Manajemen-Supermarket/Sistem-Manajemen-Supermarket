@@ -59,7 +59,7 @@ def main():
         """)
                 break
             else:
-                print("Pilihan tidak valid. Coba lagi.")
+                print("Pilihan tidak valid! Coba lagi.")
     
         except KeyboardInterrupt :
                 print("> PERHATIKAN INPUT")
@@ -586,5 +586,6 @@ def hapus_barang():
 
 # jalankan program 
 main()
+
 
 
