@@ -18,7 +18,6 @@ Flowchart sistem login dan registrasi ini menggambarkan alur pengguna dari tampi
 ### **Menu Admin**
 ![PADDP-Menu Admin](https://github.com/user-attachments/assets/00184d55-976f-43c8-9db9-549c0d5c6f63)
 Flowchart menu admin menggambarkan alur kerja fitur yang digunakan oleh admin untuk mengelola data produk dalam sistem. Melalui menu ini, admin dapat menambahkan produk baru, melihat daftar produk yang tersedia, memperbarui informasi produk, menghapus produk yang tidak diperlukan, serta keluar (logout) dari sistem. Setiap proses memiliki tahapan validasi untuk memastikan data yang dikelola benar dan tidak terjadi duplikasi atau kesalahan input.
-📋 Deskripsi Alur
 
 ---
 
@@ -31,7 +30,7 @@ Flowchart menu admin menggambarkan alur kerja fitur yang digunakan oleh admin un
         
 - Jika valid, data produk disimpan dan muncul pesan “Produk berhasil ditambahkan”.
         
-\
+
 **Lihat Produk**
 - Admin memilih opsi lihat produk.
 - Sistem mengakses data produk dan menampilkan seluruh produk yang tersedia.
@@ -103,6 +102,8 @@ Flowchart menu pembeli menggambarkan alur aktivitas pengguna saat melakukan tran
 <img width="296" height="185" alt="image" src="https://github.com/user-attachments/assets/7b84723c-6016-43e6-9633-c414e3c65595" />\
 Pada saat program dijalankan, tampilan pertama yang ditampilkan program ini adalah pilihan untuk melakukan login sebagai Admin atau User. Jika memilih “1”, maka akan muncul tampilan login admin dan diminta untuk memasukkan username dan password untuk admin. Jika memilih “2”, maka akan muncul tampilan opsi register, dan jika memilih “3”, maka  akan keluar dari program
 
+---
+
 ## Menu Admin
 <img width="236" height="119" alt="image" src="https://github.com/user-attachments/assets/25f032e2-a810-4291-ad10-492d1ba5dc9d" />
 
@@ -138,6 +139,8 @@ jika admin memilih pilihan 4, maka admin diminta untuk menginput ID produk yang 
 
 jika admin memilih 5, maka admin akan keluar dari menu admin dan kembali pada menu awal program.
 
+---
+
 ## Menu Pembeli
 <img width="658" height="446" alt="image" src="https://github.com/user-attachments/assets/a8cc912e-741f-4745-9083-b6623046e7fb" />
 
@@ -166,6 +169,8 @@ Jika sudah memilih maka saldo e-money telah berhasil ditambahkan ke akun pembeli
 <img width="544" height="389" alt="image" src="https://github.com/user-attachments/assets/5593c36b-4a5b-461d-8e7d-d0992cb23078" />
 
 Jika pembeli memilih pilihan 4, maka pembeli akan keluar dari menu pembeli dan Kembali ke menu login user.
+
+---
 
  ## Menu Keluar
 <img width="571" height="148" alt="image" src="https://github.com/user-attachments/assets/e8ad196f-f738-47ee-bc34-3015dcacf946" />
